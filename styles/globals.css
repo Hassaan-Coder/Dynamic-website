@@ -25,3 +25,11 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+.animateBtn {
+  @apply transition-all duration-150 ease-linear;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
