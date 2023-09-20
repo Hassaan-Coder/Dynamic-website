@@ -35,8 +35,14 @@ const Navbar = () => {
     <nav className="bg-white shadow-2xl sticky top-0 z-10 shadow-cyan-200/50 flex flex-col lg:flex-row lg:justify-center items-center rounded-md justify-around my-auto p-2 md:py-3 md:m-3">
       <div className="flex flex-row justify-between w-full">
         <div className="w-36 md:w-52 my-auto">
-          <Link href="/">
-            <Image src={"/logo.svg"} alt="logo" width={300} height={80} />
+          <Link href="/" legacyBehavior>
+            <Image
+              src="/logo.jpeg"
+              alt="Picture of the author"
+              width={60}
+              height={60}
+              className="border rounded-full"
+            />
           </Link>
         </div>
         <div
@@ -53,25 +59,29 @@ const Navbar = () => {
       >
         {navLinks.map((item) => (
           <div key={item.name} className="hover:underline">
-            <Link href={item.link}>{item.name}</Link>
+            <Link href={item.link} legacyBehavior>
+              {item.name}
+            </Link>
           </div>
         ))}
         <div className="block lg:hidden">
-          <Link href="/#contact" legacyBehavior>
-            <MyBtn textContent={"Contact"} />
+          <Link href="/#company" legacyBehavior>
+            <MyBtn textContent={"Company"} />
           </Link>
         </div>
       </div>
       <div className="hidden lg:flex flex-row justify-around space-y-0 space-x-6 lg:space-x-10 font-semibold">
         {navLinks.map((item) => (
           <div key={item.name} className="hover:underline my-auto">
-            <Link href={item.link}>{item.name}</Link>
+            <Link href={item.link} legacyBehavior>
+              {item.name}
+            </Link>
           </div>
         ))}
       </div>
       <div className="hidden lg:flex ml-6">
-        <Link href="/#contact" legacyBehavior>
-          <MyBtn textContent={"Contact"} />
+        <Link href="/#company" legacyBehavior>
+          <MyBtn textContent={"Company"} />
         </Link>
       </div>
     </nav>
