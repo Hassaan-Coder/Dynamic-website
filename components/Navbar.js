@@ -36,9 +36,9 @@ const Navbar = () => {
       <div className="flex flex-row justify-between w-full">
         <div className="w-36 md:w-52 my-auto">
           <Link href="/">
-            <a>
-              <Image src={"/logo.svg"} alt="logo" width="300px" height="80px" />
-            </a>
+
+            <Image src={"/logo.svg"} alt="logo" width="300px" height="80px" />
+
           </Link>
         </div>
         <div
@@ -56,12 +56,12 @@ const Navbar = () => {
         {navLinks.map((item) => (
           <div key={item.name} className="hover:underline">
             <Link href={item.link}>
-              <a>{item.name}</a>
+              {item.name}
             </Link>
           </div>
         ))}
         <div className="block lg:hidden">
-          <Link href="/#contact">
+          <Link href="/#contact" legacyBehavior>
             <MyBtn textContent={"Contact"} />
           </Link>
         </div>
@@ -70,13 +70,13 @@ const Navbar = () => {
         {navLinks.map((item) => (
           <div key={item.name} className="hover:underline my-auto">
             <Link href={item.link}>
-              <a>{item.name}</a>
+              {item.name}
             </Link>
           </div>
         ))}
       </div>
       <div className="hidden lg:flex ml-6">
-        <Link href="/#contact">
+        <Link href="/#contact" legacyBehavior>
           <MyBtn textContent={"Contact"} />
         </Link>
       </div>
