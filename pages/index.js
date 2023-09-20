@@ -1,6 +1,7 @@
 import Head from "next/head";
-import Image from "next/image";
 import Navbar from "../components/Navbar";
+import Hero from "../components/hero";
+import Goal from "../components/Goal";
 
 const Home = () => {
   return (
@@ -12,7 +13,8 @@ const Home = () => {
 
       <Navbar />
       <main className="relative flex-1 lg:container text-center p-0 mx-auto overflow-x-hidden overflow-auto">
-        …
+        <Hero />
+        <Goal />
       </main>
     </div>
   );
